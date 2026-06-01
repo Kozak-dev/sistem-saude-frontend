@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // LOGIN
@@ -36,6 +37,17 @@ import LayoutMedico from "./components/medico/Layout";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
+  useEffect(() => {
+  const script = document.createElement("script");
+  script.src = "https://vlibras.gov.br/app/vlibras-plugin.js";
+  script.async = true;
+
+  script.onload = () => {
+    new window.VLibras.Widget("https://vlibras.gov.br/app");
+  };
+
+  document.body.appendChild(script);
+}, []);
   return (
     <BrowserRouter>
 
