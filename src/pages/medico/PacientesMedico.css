@@ -1,0 +1,437 @@
+.hist-container {
+  min-height: 100vh;
+  background: #f0f4f8;
+  padding: 32px;
+  font-family: Arial, sans-serif;
+}
+
+.hist-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.hist-topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #f0f4f8;
+  padding-bottom: 20px;
+  margin-bottom: 24px;
+}
+
+.hist-titulo {
+  margin: 0;
+  font-size: 26px;
+  color: #2d3748;
+}
+
+.hist-subtitulo {
+  margin-top: 6px;
+  color: #718096;
+  font-size: 14px;
+}
+
+.hist-botao-principal {
+  height: 44px;
+  padding: 0 18px;
+  background: #2d8c6e;
+  color: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.hist-botao-principal:hover {
+  opacity: 0.9;
+}
+
+.hist-grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 24px;
+}
+
+.hist-sidebar {
+  border: 1px solid #f0f4f8;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.hist-input-box {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.hist-input-box i {
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  color: #718096;
+}
+
+.hist-input-box input {
+  width: 100%;
+  height: 46px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding-left: 42px;
+  padding-right: 14px;
+  outline: none;
+  transition: 0.2s;
+  box-sizing: border-box;
+}
+
+.hist-input-box input:focus {
+  border-color: #2d8c6e;
+}
+
+.hist-pacientes-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hist-paciente-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.hist-paciente-item:hover {
+  background: #f8fbfd;
+}
+
+.hist-paciente-item-ativo {
+  background: #e6f4ef;
+}
+
+.hist-paciente-item img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.hist-paciente-item h3 {
+  margin: 0;
+  font-size: 15px;
+  color: #2d3748;
+}
+
+.hist-paciente-item p {
+  margin-top: 4px;
+  font-size: 12px;
+  color: #718096;
+}
+
+.hist-paginacao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.hist-pagina {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.2s;
+  color: #2d3748;
+}
+
+.hist-pagina:hover {
+  background: #e6f4ef;
+}
+
+.hist-pagina-ativa {
+  background: #2d8c6e;
+  color: #ffffff;
+  border-color: #2d8c6e;
+}
+
+.hist-detalhes {
+  border: 1px solid #f0f4f8;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.hist-info-topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.hist-info-topo h2 {
+  margin: 0;
+  color: #2d3748;
+}
+
+.hist-info-topo p {
+  margin-top: 6px;
+  color: #718096;
+  font-size: 14px;
+}
+
+.hist-acao {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #dc2626;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.hist-acao:hover {
+  background: #fee2e2;
+}
+
+.hist-tabs {
+  display: flex;
+  gap: 12px;
+  border-bottom: 1px solid #f0f4f8;
+  padding-bottom: 18px;
+  margin-bottom: 24px;
+}
+
+.hist-tab {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  cursor: pointer;
+  transition: 0.2s;
+  color: #718096;
+  font-size: 14px;
+}
+
+.hist-tab:hover {
+  background: #e6f4ef;
+}
+
+.hist-tab-ativa {
+  background: #2d8c6e;
+  border-color: #2d8c6e;
+  color: #ffffff;
+}
+
+.hist-resumo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.hist-resumo-card {
+  background: #f8fbfd;
+  border-radius: 12px;
+  padding: 18px;
+}
+
+.hist-resumo-card span {
+  display: block;
+  color: #718096;
+  font-size: 13px;
+}
+
+.hist-resumo-card strong {
+  display: block;
+  margin-top: 10px;
+  color: #2d3748;
+  font-size: 24px;
+}
+
+.hist-resumo-card p {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #718096;
+}
+
+.hist-historico {
+  border: 1px solid #f0f4f8;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.hist-historico-topo {
+  padding: 18px 20px;
+  border-bottom: 1px solid #f0f4f8;
+}
+
+.hist-historico-topo h3 {
+  margin: 0;
+  color: #2d3748;
+  font-size: 16px;
+}
+
+.hist-historico-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 20px;
+  border-bottom: 1px solid #f0f4f8;
+}
+
+.hist-historico-item:last-child {
+  border-bottom: none;
+}
+
+.hist-historico-item span {
+  color: #718096;
+  font-size: 13px;
+}
+
+.hist-historico-item strong {
+  color: #2d3748;
+  font-size: 14px;
+}
+
+.hist-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.hist-modal {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.hist-modal-topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px;
+  border-bottom: 1px solid #f0f4f8;
+}
+
+.hist-modal-topo h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #2d3748;
+}
+
+.hist-fechar {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.hist-fechar:hover {
+  background: #f8fbfd;
+}
+
+.hist-modal-conteudo {
+  padding: 24px 22px;
+  color: #718096;
+  font-size: 14px;
+}
+
+.hist-modal-acoes {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 0 22px 22px;
+}
+
+.hist-botao-secundario,
+.hist-botao-primario {
+  height: 42px;
+  padding: 0 18px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.hist-botao-secundario {
+  border: 1px solid #e2e8f0;
+  color: #2d8c6e;
+}
+
+.hist-botao-secundario:hover {
+  background: #e6f4ef;
+}
+
+.hist-botao-primario {
+  background: #dc2626;
+  color: #ffffff;
+}
+
+.hist-botao-primario:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 992px) {
+  .hist-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hist-resumo-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .hist-container {
+    padding: 16px;
+  }
+
+  .hist-topo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .hist-tabs {
+    overflow-x: auto;
+  }
+
+  .hist-historico-item {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .hist-modal-acoes {
+    flex-direction: column;
+  }
+
+  .hist-botao-principal {
+    width: 100%;
+    justify-content: center;
+  }
+}

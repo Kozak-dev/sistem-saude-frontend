@@ -1,0 +1,314 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.exam-container {
+  min-height: 100vh;
+  background: #f0f4f8;
+  padding: 32px;
+  font-family: Arial, sans-serif;
+}
+
+.exam-conteudo {
+  width: 100%;
+}
+
+.exam-topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.exam-titulo {
+  font-size: 26px;
+  color: #2d3748;
+  margin-bottom: 6px;
+}
+
+.exam-subtitulo {
+  color: #718096;
+  font-size: 14px;
+}
+
+.exam-botao-topo {
+  background: #2d8c6e;
+  border: none;
+  color: #fff;
+  height: 46px;
+  padding: 0 22px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.exam-botao-topo:hover {
+  opacity: 0.9;
+}
+
+.exam-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.exam-filtros {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.exam-input-container {
+  position: relative;
+  flex: 1;
+}
+
+.exam-input-container i {
+  position: absolute;
+  left: 14px;
+  top: 15px;
+  color: #718096;
+  font-size: 14px;
+}
+
+.exam-input {
+  width: 100%;
+  height: 44px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0 14px 0 40px;
+  outline: none;
+  color: #2d3748;
+  font-size: 14px;
+}
+
+.exam-input:focus {
+  border-color: #2d8c6e;
+}
+
+.exam-select {
+  height: 44px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0 14px;
+  outline: none;
+  cursor: pointer;
+  color: #2d3748;
+  font-size: 14px;
+}
+
+.exam-select:focus {
+  border-color: #2d8c6e;
+}
+
+.exam-solicitar-btn {
+  height: 44px;
+  padding: 0 18px;
+  background: #2d8c6e;
+  color: #fff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.exam-solicitar-btn:hover {
+  opacity: 0.92;
+}
+
+.exam-tabela {
+  width: 100%;
+}
+
+.exam-tabela-header {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr 1.8fr 1fr 90px;
+  padding: 14px 10px;
+  border-bottom: 1px solid #f0f4f8;
+  color: #718096;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.exam-tabela-row {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr 1.8fr 1fr 90px;
+  padding: 16px 10px;
+  align-items: center;
+  border-bottom: 1px solid #f0f4f8;
+  color: #2d3748;
+  font-size: 14px;
+}
+
+.exam-exame-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.exam-exame-status-verde {
+  background: #e6f9f1;
+  color: #1a9e6e;
+}
+
+.exam-exame-status-laranja {
+  background: #fff4e5;
+  color: #c97b1a;
+}
+
+.exam-exame-status-azul {
+  background: #e8f1ff;
+  color: #3b7de8;
+}
+
+.exam-exame-status-vermelho {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.exam-acao-btn {
+  width: 38px;
+  height: 38px;
+  border: 1px solid #e2e8f0;
+  background: #fff;
+  border-radius: 8px;
+  color: #2d8c6e;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.exam-acao-btn:hover {
+  background: #e6f4ef;
+}
+
+.exam-paginacao {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.exam-paginacao-btn {
+  height: 38px;
+  padding: 0 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #fff;
+  color: #2d3748;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.exam-paginacao-btn:hover {
+  background: #e6f4ef;
+}
+
+.exam-pagina-numero {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  background: #fff;
+  color: #2d3748;
+  cursor: pointer;
+}
+
+.exam-pagina-ativa {
+  background: #2d8c6e;
+  color: #fff;
+  border-color: #2d8c6e;
+}
+
+.exam-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.exam-modal {
+  width: 420px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.exam-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 22px;
+  border-bottom: 1px solid #f0f4f8;
+}
+
+.exam-modal-header h2 {
+  color: #2d3748;
+  font-size: 20px;
+}
+
+.exam-fechar-modal {
+  border: none;
+  background: transparent;
+  color: #718096;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.exam-modal-body {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.exam-modal-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.exam-modal-label {
+  color: #718096;
+  font-size: 13px;
+}
+
+.exam-modal-valor {
+  color: #2d3748;
+  font-size: 15px;
+}
+
+.exam-modal-footer {
+  padding: 18px 22px;
+  border-top: 1px solid #f0f4f8;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.exam-modal-btn {
+  height: 42px;
+  padding: 0 18px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  background: #fff;
+  color: #2d8c6e;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.exam-modal-btn:hover {
+  background: #e6f4ef;
+}

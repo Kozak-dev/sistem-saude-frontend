@@ -1,0 +1,330 @@
+.atestado-page {
+  background: #f0f4f8;
+  min-height: 100vh;
+  padding: 24px;
+  font-family: Arial, sans-serif;
+}
+
+.atestado-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.atestado-title {
+  font-size: 24px;
+  color: #2d3748;
+  margin: 0;
+}
+
+.atestado-subtitle {
+  margin-top: 6px;
+  color: #718096;
+  font-size: 14px;
+}
+
+.atestado-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.atestado-status-success {
+  background: #e6f9f1;
+  color: #1a9e6e;
+}
+
+.atestado-status-warning {
+  background: #fff4e5;
+  color: #c97b1a;
+}
+
+.atestado-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.atestado-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.atestado-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.atestado-field-full {
+  grid-column: span 1;
+}
+
+.atestado-label {
+  font-size: 14px;
+  color: #2d3748;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.atestado-input,
+.atestado-textarea {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 14px;
+  color: #2d3748;
+  outline: none;
+  transition: 0.2s;
+  background: #fff;
+}
+
+.atestado-input:focus,
+.atestado-textarea:focus {
+  border-color: #2d8c6e;
+}
+
+.atestado-textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+.atestado-select-wrapper {
+  position: relative;
+}
+
+.atestado-select {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  color: #718096;
+  transition: 0.2s;
+}
+
+.atestado-select:hover {
+  border-color: #2d8c6e;
+}
+
+.atestado-dropdown {
+  position: absolute;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  margin-top: 8px;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.atestado-search-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border-bottom: 1px solid #f0f4f8;
+}
+
+.atestado-dropdown-list {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.atestado-dropdown-item {
+  padding: 12px;
+  cursor: pointer;
+  color: #2d3748;
+  transition: 0.2s;
+}
+
+.atestado-dropdown-item:hover {
+  background: #e6f4ef;
+  color: #2d8c6e;
+}
+
+.atestado-empty {
+  padding: 14px;
+  color: #718096;
+  text-align: center;
+}
+
+.atestado-signature-area {
+  margin-top: 28px;
+}
+
+.atestado-signature-box {
+  border: 1px dashed #cbd5e0;
+  border-radius: 10px;
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #718096;
+  cursor: pointer;
+  transition: 0.2s;
+  max-width: 280px;
+}
+
+.atestado-signature-box i {
+  font-size: 22px;
+}
+
+.atestado-signature-box:hover {
+  background: #e6f4ef;
+  border-color: #2d8c6e;
+}
+
+.atestado-signature-active {
+  background: #e6f9f1;
+  border-color: #1a9e6e;
+  color: #1a9e6e;
+}
+
+.atestado-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 32px;
+  border-top: 1px solid #f0f4f8;
+  padding-top: 24px;
+}
+
+.atestado-btn {
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-weight: 600;
+}
+
+.atestado-btn-secondary {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  color: #2d8c6e;
+}
+
+.atestado-btn-secondary:hover {
+  background: #e6f4ef;
+}
+
+.atestado-btn-primary {
+  background: #2d8c6e;
+  border: 1px solid #2d8c6e;
+  color: #fff;
+}
+
+.atestado-btn-primary:hover {
+  opacity: 0.92;
+}
+
+.atestado-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.atestado-modal {
+  width: 420px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px;
+  text-align: center;
+}
+
+.atestado-modal-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #e6f9f1;
+  color: #1a9e6e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 30px;
+}
+
+.atestado-modal h2 {
+  margin: 0;
+  color: #2d3748;
+}
+
+.atestado-modal p {
+  color: #718096;
+  margin-top: 10px;
+}
+
+.atestado-modal-info {
+  margin-top: 20px;
+  border: 1px solid #f0f4f8;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.atestado-modal-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-bottom: 1px solid #f0f4f8;
+}
+
+.atestado-modal-item:last-child {
+  border-bottom: none;
+}
+
+.atestado-modal-item span {
+  color: #718096;
+}
+
+.atestado-modal-item strong {
+  color: #2d3748;
+}
+
+.atestado-modal-btn {
+  width: 100%;
+  margin-top: 24px;
+}
+
+@media (max-width: 768px) {
+  .atestado-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .atestado-field-full {
+    grid-column: span 1;
+  }
+
+  .atestado-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .atestado-actions {
+    flex-direction: column;
+  }
+
+  .atestado-btn {
+    width: 100%;
+  }
+
+  .atestado-modal {
+    width: 90%;
+  }
+}

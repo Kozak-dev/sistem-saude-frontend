@@ -1,0 +1,399 @@
+.mensagens-container {
+  min-height: 100vh;
+  background: #f0f4f8;
+  padding: 32px;
+  font-family: Arial, sans-serif;
+}
+
+.mensagens-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.mensagens-topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #f0f4f8;
+  padding-bottom: 20px;
+  margin-bottom: 24px;
+}
+
+.mensagens-titulo {
+  margin: 0;
+  font-size: 26px;
+  color: #2d3748;
+}
+
+.mensagens-subtitulo {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #718096;
+}
+
+.mensagens-botao-nova {
+  height: 42px;
+  padding: 0 18px;
+  border-radius: 10px;
+  background: #2d8c6e;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.mensagens-botao-nova:hover {
+  opacity: 0.9;
+}
+
+.mensagens-tabs {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  border-bottom: 1px solid #f0f4f8;
+  margin-bottom: 20px;
+}
+
+.mensagens-tab {
+  padding: 14px 0;
+  color: #718096;
+  cursor: pointer;
+  font-size: 14px;
+  position: relative;
+  transition: 0.2s;
+}
+
+.mensagens-tab:hover {
+  color: #2d8c6e;
+}
+
+.mensagens-tab-ativa {
+  color: #2d8c6e;
+  font-weight: 600;
+}
+
+.mensagens-tab-ativa::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 2px;
+  background: #2d8c6e;
+}
+
+.mensagens-busca-box {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.mensagens-busca-box i {
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  color: #718096;
+}
+
+.mensagens-busca-box input {
+  width: 100%;
+  height: 46px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #ffffff;
+  padding-left: 42px;
+  padding-right: 14px;
+  outline: none;
+  font-size: 14px;
+  color: #2d3748;
+  box-sizing: border-box;
+  transition: 0.2s;
+}
+
+.mensagens-busca-box input:focus {
+  border-color: #2d8c6e;
+}
+
+.mensagens-lista {
+  border: 1px solid #f0f4f8;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.mensagens-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px;
+  border-bottom: 1px solid #f0f4f8;
+  cursor: pointer;
+  transition: 0.2s;
+  background: #ffffff;
+}
+
+.mensagens-item:last-child {
+  border-bottom: none;
+}
+
+.mensagens-item:hover {
+  background: #f8fbfd;
+}
+
+.mensagens-item-esquerda {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.mensagens-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #e6f4ef;
+  color: #2d8c6e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.mensagens-conteudo h3 {
+  margin: 0;
+  font-size: 15px;
+  color: #2d3748;
+}
+
+.mensagens-conteudo h4 {
+  margin: 6px 0 4px;
+  font-size: 14px;
+  color: #2d3748;
+  font-weight: 600;
+}
+
+.mensagens-conteudo p {
+  margin: 0;
+  font-size: 13px;
+  color: #718096;
+}
+
+.mensagens-linha-topo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mensagens-horario {
+  font-size: 12px;
+  color: #718096;
+  white-space: nowrap;
+}
+
+.mensagens-badge {
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.mensagens-badge-verde {
+  background: #e6f9f1;
+  color: #1a9e6e;
+}
+
+.mensagens-badge-laranja {
+  background: #fff4e5;
+  color: #c97b1a;
+}
+
+.mensagens-badge-azul {
+  background: #e8f1ff;
+  color: #3b7de8;
+}
+
+.mensagens-paginacao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.mensagens-pagina {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  color: #2d3748;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.mensagens-pagina:hover {
+  background: #e6f4ef;
+}
+
+.mensagens-pagina-ativa {
+  background: #2d8c6e;
+  color: #ffffff;
+  border-color: #2d8c6e;
+}
+
+.mensagens-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.mensagens-modal {
+  width: 100%;
+  max-width: 520px;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.mensagens-modal-topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px;
+  border-bottom: 1px solid #f0f4f8;
+}
+
+.mensagens-modal-topo h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #2d3748;
+}
+
+.mensagens-modal-topo span {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+  color: #718096;
+}
+
+.mensagens-fechar {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #718096;
+  transition: 0.2s;
+}
+
+.mensagens-fechar:hover {
+  background: #f8fbfd;
+}
+
+.mensagens-modal-conteudo {
+  padding: 24px 22px;
+}
+
+.mensagens-modal-conteudo p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #2d3748;
+}
+
+.mensagens-modal-acoes {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 0 22px 22px;
+}
+
+.mensagens-botao-secundario,
+.mensagens-botao-primario {
+  height: 42px;
+  padding: 0 18px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.mensagens-botao-secundario {
+  border: 1px solid #e2e8f0;
+  color: #2d8c6e;
+  background: #ffffff;
+}
+
+.mensagens-botao-secundario:hover {
+  background: #e6f4ef;
+}
+
+.mensagens-botao-primario {
+  background: #2d8c6e;
+  color: #ffffff;
+}
+
+.mensagens-botao-primario:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .mensagens-container {
+    padding: 16px;
+  }
+
+  .mensagens-topo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .mensagens-tabs {
+    overflow-x: auto;
+  }
+
+  .mensagens-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .mensagens-item-esquerda {
+    width: 100%;
+  }
+
+  .mensagens-horario {
+    padding-left: 64px;
+  }
+
+  .mensagens-modal-acoes {
+    flex-direction: column;
+  }
+
+  .mensagens-botao-secundario,
+  .mensagens-botao-primario,
+  .mensagens-botao-nova {
+    width: 100%;
+  }
+}

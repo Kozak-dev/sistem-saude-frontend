@@ -1,0 +1,763 @@
+/* ============================================================
+   ConfiguracoesPage.css
+   Escopo: apenas conteúdo interno (sem sidebar/topbar do app)
+   ============================================================ */
+
+/* ---- Layout raiz ---- */
+.configuracoes-page {
+  display: flex;
+  gap: 28px;
+  padding: 28px 32px;
+  flex: 1;
+  min-height: 0;
+  align-items: flex-start;
+}
+
+/* ============================================================
+   LEFT NAV
+   ============================================================ */
+.cfg-nav {
+  width: 210px;
+  flex-shrink: 0;
+  background: #ffffff;
+  border: 1px solid #e2ebe9;
+  border-radius: 12px;
+  padding: 16px 12px;
+  box-shadow: 0 1px 4px rgba(42,157,143,0.06);
+  position: sticky;
+  top: 28px;
+}
+
+.cfg-nav-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: #a0aec0;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 4px 12px 12px;
+  border-bottom: 1px solid #e2ebe9;
+  margin-bottom: 8px;
+}
+
+.cfg-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: none;
+  background: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #4a5568;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  text-align: left;
+}
+
+.cfg-nav-item:hover {
+  background: #f0faf8;
+  color: #2a9d8f;
+}
+
+.cfg-nav-item.active {
+  background: #e8f5f3;
+  color: #1a7a6e;
+  font-weight: 700;
+}
+
+.cfg-nav-icon {
+  font-size: 16px;
+  width: 22px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   CONTENT AREA
+   ============================================================ */
+.cfg-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.cfg-tab-content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ============================================================
+   CARD
+   ============================================================ */
+.cfg-card {
+  background: #ffffff;
+  border: 1px solid #e2ebe9;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(42,157,143,0.06);
+  overflow: hidden;
+}
+
+.cfg-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 22px 14px;
+  border-bottom: 1px solid #f0f5f4;
+}
+
+.cfg-card-icon {
+  width: 38px;
+  height: 38px;
+  background: #e8f5f3;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.cfg-card-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a2332;
+  line-height: 1;
+}
+
+.cfg-card-sub {
+  font-size: 12px;
+  color: #a0aec0;
+  margin-top: 3px;
+}
+
+.cfg-card-body {
+  padding: 20px 22px;
+}
+
+/* ============================================================
+   GRID / STACK
+   ============================================================ */
+.cfg-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.cfg-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ============================================================
+   FIELD
+   ============================================================ */
+.cfg-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.cfg-field-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #4a5568;
+}
+
+.cfg-field-hint {
+  font-size: 11px;
+  color: #a0aec0;
+  margin-top: -3px;
+}
+
+.cfg-input {
+  border: 1px solid #e2ebe9;
+  border-radius: 8px;
+  padding: 10px 13px;
+  font-size: 14px;
+  color: #1a2332;
+  background: #f7fafa;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  width: 100%;
+}
+
+.cfg-input:focus {
+  border-color: #2a9d8f;
+  box-shadow: 0 0 0 3px rgba(42,157,143,0.1);
+  background: #fff;
+}
+
+.cfg-input.disabled {
+  background: #edf2f0;
+  color: #a0aec0;
+  cursor: not-allowed;
+}
+
+.cfg-select {
+  border: 1px solid #e2ebe9;
+  border-radius: 8px;
+  padding: 10px 13px;
+  font-size: 14px;
+  color: #1a2332;
+  background: #f7fafa;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.cfg-select.full {
+  max-width: 320px;
+}
+
+.cfg-select:focus {
+  border-color: #2a9d8f;
+}
+
+/* ============================================================
+   AVATAR ROW (Perfil)
+   ============================================================ */
+.cfg-avatar-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 6px 0 20px;
+  border-bottom: 1px solid #f0f5f4;
+  margin-bottom: 20px;
+}
+
+.cfg-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #e8f5f3;
+  border: 3px solid #2a9d8f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  flex-shrink: 0;
+}
+
+.cfg-avatar-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a2332;
+}
+
+.cfg-avatar-role {
+  font-size: 13px;
+  color: #718096;
+  margin-bottom: 8px;
+}
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+.cfg-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 11px 22px;
+  background: #2a9d8f;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.cfg-btn-primary:hover {
+  background: #1a7a6e;
+}
+
+.cfg-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 20px;
+  background: transparent;
+  color: #2a9d8f;
+  border: 1.5px solid #2a9d8f;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.cfg-btn-outline:hover {
+  background: #e8f5f3;
+}
+
+.cfg-btn-outline.small {
+  padding: 7px 14px;
+  font-size: 12px;
+}
+
+.cfg-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  padding: 11px 22px;
+  background: transparent;
+  color: #718096;
+  border: 1px solid #e2ebe9;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.cfg-btn-ghost:hover {
+  background: #f7fafa;
+}
+
+.cfg-btn-danger {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 18px;
+  background: #fff5f5;
+  color: #c53030;
+  border: 1.5px solid #fc8181;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.cfg-btn-danger:hover {
+  background: #fed7d7;
+}
+
+.cfg-btn-danger.small {
+  padding: 7px 14px;
+  font-size: 12px;
+}
+
+.cfg-btn-danger-sm {
+  padding: 6px 12px;
+  background: #fff5f5;
+  color: #c53030;
+  border: 1px solid #fc8181;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+
+.cfg-btn-danger-sm:hover {
+  background: #fed7d7;
+}
+
+.cfg-link-btn {
+  background: none;
+  border: none;
+  color: #2a9d8f;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.cfg-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding-top: 4px;
+}
+
+/* ============================================================
+   TOGGLE
+   ============================================================ */
+.cfg-toggle {
+  width: 44px;
+  height: 24px;
+  border-radius: 12px;
+  background: #e2e8f0;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+  transition: background 0.2s;
+  padding: 0;
+}
+
+.cfg-toggle.on {
+  background: #2a9d8f;
+}
+
+.cfg-toggle-thumb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  transition: transform 0.2s;
+}
+
+.cfg-toggle.on .cfg-toggle-thumb {
+  transform: translateX(20px);
+}
+
+.cfg-toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 13px 0;
+  border-bottom: 1px solid #f0f5f4;
+}
+
+.cfg-toggle-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.cfg-toggle-row:first-child {
+  padding-top: 0;
+}
+
+.cfg-toggle-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a2332;
+  margin-bottom: 2px;
+}
+
+.cfg-toggle-sub {
+  font-size: 12px;
+  color: #a0aec0;
+}
+
+/* ============================================================
+   SEGURANÇA
+   ============================================================ */
+.cfg-password-rules {
+  display: flex;
+  gap: 18px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+.cfg-rule {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #718096;
+}
+
+.cfg-rule-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #2a9d8f;
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+.cfg-session {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 13px 0;
+  border-bottom: 1px solid #f0f5f4;
+}
+
+.cfg-session:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.cfg-session:first-child {
+  padding-top: 0;
+}
+
+.cfg-session-icon {
+  width: 40px;
+  height: 40px;
+  background: #f0faf8;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.cfg-session-info {
+  flex: 1;
+}
+
+.cfg-session-device {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a2332;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cfg-session-meta {
+  font-size: 12px;
+  color: #a0aec0;
+  margin-top: 2px;
+}
+
+.badge-atual {
+  background: #d4edda;
+  color: #2d6a4f;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 2px 9px;
+}
+
+/* ============================================================
+   PRIVACIDADE
+   ============================================================ */
+.cfg-data-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.cfg-data-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid #f0f5f4;
+}
+
+.cfg-data-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.cfg-data-item:first-child {
+  padding-top: 0;
+}
+
+.cfg-data-icon {
+  font-size: 22px;
+  width: 36px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.cfg-data-item .cfg-toggle-label,
+.cfg-data-item .cfg-toggle-sub {
+  flex: 1;
+}
+
+/* ============================================================
+   PLANO
+   ============================================================ */
+.cfg-plan-box {
+  background: linear-gradient(135deg, #e8f5f3 0%, #f0faf8 100%);
+  border: 1.5px solid #b2ddd8;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+}
+
+.cfg-plan-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #2a9d8f;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 20px;
+  padding: 5px 16px;
+  margin-bottom: 14px;
+}
+
+.cfg-plan-price {
+  font-size: 42px;
+  font-weight: 800;
+  color: #1a7a6e;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.cfg-plan-price span {
+  font-size: 18px;
+  font-weight: 500;
+  color: #2a9d8f;
+}
+
+.cfg-plan-renova {
+  font-size: 13px;
+  color: #718096;
+  margin-bottom: 20px;
+}
+
+.cfg-plan-features {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.cfg-plan-feat {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #1a2332;
+}
+
+.feat-check {
+  color: #2a9d8f;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.cfg-payment-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.cfg-card-brand {
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.cfg-fatura-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 11px 0;
+  border-bottom: 1px solid #f0f5f4;
+  font-size: 14px;
+}
+
+.cfg-fatura-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.cfg-fatura-row:first-child {
+  padding-top: 0;
+}
+
+.cfg-fatura-data {
+  color: #718096;
+  min-width: 90px;
+}
+
+.cfg-fatura-valor {
+  color: #1a2332;
+  font-weight: 600;
+  flex: 1;
+}
+
+.badge-pago {
+  background: #d4edda;
+  color: #2d6a4f;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 2px 10px;
+}
+
+/* ============================================================
+   APARÊNCIA
+   ============================================================ */
+.cfg-theme-grid {
+  display: flex;
+  gap: 14px;
+}
+
+.cfg-theme-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 18px 12px;
+  border: 2px solid #e2ebe9;
+  border-radius: 12px;
+  background: #f7fafa;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+  position: relative;
+}
+
+.cfg-theme-card:hover {
+  border-color: #2a9d8f;
+  background: #f0faf8;
+}
+
+.cfg-theme-card.selected {
+  border-color: #2a9d8f;
+  background: #e8f5f3;
+}
+
+.cfg-theme-emoji {
+  font-size: 28px;
+}
+
+.cfg-theme-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a2332;
+}
+
+.cfg-theme-check {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  color: #2a9d8f;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.cfg-size-row {
+  display: flex;
+  gap: 10px;
+}
+
+.cfg-size-btn {
+  flex: 1;
+  padding: 10px;
+  border: 1.5px solid #e2ebe9;
+  border-radius: 8px;
+  background: #f7fafa;
+  font-size: 14px;
+  font-weight: 500;
+  color: #4a5568;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, color 0.15s;
+}
+
+.cfg-size-btn:hover {
+  border-color: #2a9d8f;
+  color: #2a9d8f;
+}
+
+.cfg-size-btn.selected {
+  border-color: #2a9d8f;
+  background: #e8f5f3;
+  color: #1a7a6e;
+  font-weight: 700;
+}
